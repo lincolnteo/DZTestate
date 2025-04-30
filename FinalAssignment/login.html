@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="login.css">
+  <title>Sign Up</title> 
+</head>
+<!---->
+<body>
+    <!--a header with our logo and a navigation: griffith college logo, three links -->
+    <div class="header1">
+        <!--logo-->
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <div class="footer"> 
+            <!--griffith college logo-->
+            <a href="https://www.griffith.ie/"><img src="images/GriffithLogo.jpg" height="100" alt="griffithlogo" class="griffithlogo"></a><!--griffith logo with website-->
+            <ul><!--navigation-->
+                <li><a href="">About Us</a></li> <!--link to another page to description of us-->
+                <li><a href="mailto:longkaiz0324@gmail.com">Contact Us</a></li><!--send email to me--> 
+                <li><a href="Home.html">Back to Home</a></li><!--back to Home page-->
+            </ul>
+        </div>
+    </div>
+
+    <!--two sign up buttons to let user select to sign up as tenant or landlord to display two different forms-->
+    <div id="header2">
+        <ul class="list">
+            <!--by using java script function to display forms -->
+            <li><button type="button" id="signUp" onclick="document.getElementsByClassName('login-form1')[0].style.display = 'block';
+                                                           document.getElementsByClassName('login-form2')[0].style.display = 'none';
+                                                          ">Login as a tenant</button></li>
+            <li><button type="button" id="signUp" onclick="document.getElementsByClassName('login-form2')[0].style.display = 'block';
+                                                           document.getElementsByClassName('login-form1')[0].style.display = 'none';
+                                                           ">Login as a landlord</button></li>
+        </ul>
+    </div>
+    
+    <!--form 1 login as a tenant-->
+    <form class="login-form1" action="loginasTenant.php" method="POST">
+        <!--title-->
+        <h2>Login as a tenant</h2>  
+        <!--input username-->  
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <!--input user password-->
+        <label for="password">Password:<span style="color: red;">*</span></label>
+        <input type="password" id="password" name="password">
+         <!--submit button-->
+        <input type="submit" value="Login"><br>
+        <!--an alert to say, if user forgot name or password-->
+        <!--because it is a huge work to launch this requirement-->
+        <br><a href="#" onclick="alert('You are so stupid!!!')">Forgot your details?</a>
+    </form>
+
+    <!--form 2 login as a landlord-->
+    <form class="login-form2" action="loginasLandlord.php" method="POST">
+        <!--title-->
+        <h2>Login as a landlord</h2>
+        <!--input landlord name-->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" >
+        <!--input landlord password-->
+        <label for="password">Password:<span style="color: red;">*</span></label>
+        <input type="password" id="password" name="password">
+        <!--submit button-->
+        <input type="submit" value="Login"><br>
+        <!--an alert to say, if user forgot name or password-->
+        <!--because it is a huge work to launch this requirement-->
+        <br><a href="" onclick="alert('You are so stupid!!!')">Forgot your details?</a>
+    </form>
+
+</body>
+</html>
