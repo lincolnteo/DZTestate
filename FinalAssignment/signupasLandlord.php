@@ -34,11 +34,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if($result->num_rows>0)
         {
             // print a message say: user already exists
+<<<<<<< HEAD
          // then stay the same page let user re-input
          echo "<script>
          alert('Sorry, user already exists! Please choose another name');
          window.location.href = 'SignUp.html';
          </script>"; 
+=======
+            echo "<script>alert('Sorry, user already exists in our database')</script>";
+            // then back to the sign up page
+           // header('Location:SignUp.html');
+>>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
         
         }
         // else insert this user to our database
@@ -48,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result=$stmt->execute();
             if($result)
             {   
+<<<<<<< HEAD
                 /// then start a session
                 session_start();
                 $_SESSION['Landlordname']=$username;
@@ -57,25 +64,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                  alert('Welcome " . $_SESSION['Landlordname'] . " You have signed up successfully, Now you can login to do more operations');
                  window.location.href = 'Home.php';
                  </script>";
+=======
+                // then start a session
+                session_start();
+                $_SESSION['username']=$username;
+
+                // print a message say: user already exists
+                echo "<script>alert('Welcome $username, You have signed up successfully')</script>";
+                // then back to the home page
+                //header('Location:Home.html');
+>>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
 
                 //then do something or go any pages for tenant signed up
 
             }
+<<<<<<< HEAD
             else {
                 echo "Error updating password: " . $stmt->error;
             }
             $stmt->close();
+=======
+>>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
         }
 
     }
     // else username and password are empty
     else{
          // print a message say: the name or password shouldn't be empty
+<<<<<<< HEAD
          // then stay the same page let user re-input
          echo "<script>
          alert('Sorry, the name or password should not be empty');
          window.location.href = 'SignUp.html';
          </script>"; 
+=======
+         echo "<script>alert('Sorry, the name or password should not be empty')</script>";
+         
+         // then back to the sign up page
+         //header('Location:SignUp.html');
+>>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
     }
     
 }

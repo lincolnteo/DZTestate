@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         {
             // if valid input
             // then start a session
+<<<<<<< HEAD
              
              session_start();          
              $_SESSION['Landlordname']=$username;
@@ -44,29 +45,51 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
              header('Location:landlordLogined.php');
              exit(); 
             
+=======
+            session_start();
+            $_SESSION['username']=$username;
+            // print a welcome message
+            echo "<script>alert('Welcome back $username!');</script>";
+            // back to the home page
+            header('Location:landlordPasswordReset.html');
+>>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
 
 
             //then do something or go any pages for logined landlord
         }
         else{
             // else invalid user name or password
+<<<<<<< HEAD
             // then stay the same page let user re-input
             echo "<script>
             alert('Sorry, the name or password is incorrect! Please re-enter......');
             window.location.href = 'login.html';
             </script>"; 
+=======
+            // print a message
+            echo "<script>alert('Sorry the user name or password is incorrect!');</script>";
+            //header('Location:login.html');
+>>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
         }
     
 
     }
     // else username and password are empty
     else{
+<<<<<<< HEAD
           // else invalid user name or password
             // then stay the same page let user re-input
             echo "<script>
             alert('Sorry, the name or password is empty!');
             window.location.href = 'login.html';
             </script>"; 
+=======
+         // print a message say: the name or password shouldn't be empty
+         echo "<script>alert('Sorry, the name or password should not be empty')</script>";
+         
+         // then back to the sign up page
+         //header('Location:SignUp.html');
+>>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
     }
     
 }

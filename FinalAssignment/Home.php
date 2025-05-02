@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,3 +92,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 </body>
 </html>
+=======
+>>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
