@@ -3,8 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 02, 2025 at 04:49 PM
--- Generation Time: May 01, 2025 at 01:05 AM
+-- Generation Time: May 02, 2025 at 07:43 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,10 +38,7 @@ CREATE TABLE `landlords` (
 --
 
 INSERT INTO `landlords` (`ID`, `UserName`, `Password`) VALUES
-(3, 'dylan', '123'),
-(4, 'teo', '123');
-(1, 'dylan', '789'),
-(2, 'jerry', '456');
+(5, 'dylan', '456');
 
 -- --------------------------------------------------------
 
@@ -67,7 +63,6 @@ CREATE TABLE `properties` (
 CREATE TABLE `testimonials` (
   `ID` int(11) NOT NULL,
   `UserName` varchar(20) NOT NULL,
-  `UserID` int(11) DEFAULT NULL,
   `ServiceName` varchar(200) DEFAULT NULL,
   `Date` date DEFAULT NULL,
   `Comment` text DEFAULT NULL
@@ -78,7 +73,8 @@ CREATE TABLE `testimonials` (
 --
 
 INSERT INTO `testimonials` (`ID`, `UserName`, `ServiceName`, `Date`, `Comment`) VALUES
-(2, 'Derrick', 'dylan', '2025-05-01', 'fdfd');
+(2, 'Derrick', 'dylan', '2025-05-01', 'fdfd'),
+(3, 'Derrick', 'dylan', '2025-05-01', 'good');
 
 -- --------------------------------------------------------
 
@@ -97,14 +93,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `UserName`, `Password`) VALUES
-(13, 'Derrick', '456'),
-(14, 'Tom', '123');
-(4, 'Derrick', '789'),
-(5, 'user', '123'),
-(6, 'Longkai', '123'),
-(7, 'teo', '123'),
-(8, 'dylan', '456'),
-(9, 'Tom', '456');
+(15, 'Derrick', '456');
 
 --
 -- Indexes for dumped tables
@@ -128,8 +117,6 @@ ALTER TABLE `properties`
 --
 ALTER TABLE `testimonials`
   ADD PRIMARY KEY (`ID`);
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `UserID` (`UserID`);
 
 --
 -- Indexes for table `users`
@@ -145,8 +132,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `landlords`
 --
 ALTER TABLE `landlords`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `properties`
@@ -158,15 +144,13 @@ ALTER TABLE `properties`
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
@@ -177,12 +161,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `properties`
   ADD CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`LandlordID`) REFERENCES `landlords` (`ID`);
-
---
--- Constraints for table `testimonials`
---
-ALTER TABLE `testimonials`
-  ADD CONSTRAINT `testimonials_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
