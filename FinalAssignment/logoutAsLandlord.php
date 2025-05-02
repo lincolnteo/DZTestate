@@ -1,7 +1,7 @@
 <?php
 // log out page 
 session_start();
-$username = $_SESSION['Tenantname'];
+$username = $_SESSION['Landlordname'];
 // destroy the sesseion
 session_destroy();
 

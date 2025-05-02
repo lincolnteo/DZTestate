@@ -47,7 +47,7 @@
                   <tr><td>Enter current password:</td><td><input type="password" name="currentPassword" ></td></tr>
                   <tr><td>Enter new password:</td><td><input type="password" name="newPassword"></td></tr>
                   <tr><td>Confirm new password:</td><td><input type="password" name="confirmNewPassword"></td></tr>
-                  <tr><td><input type="submit" value="reset"  id="reset" onclick="f1.action='resetLandLordPassword.php'"></td></tr>              
+                  <tr><td><input type="submit" value="reset"  id="reset" onclick="f1.action='ResetLandLordPassword.php'"></td></tr>              
               </table>
             </form>
           </div>
@@ -56,7 +56,7 @@
             <button type="button" id="PropertyList">Add Your propery</button>
 
         <!--Log out function-->
-        <form action="logoutLandlord.php" method="POST">
+        <form action="LogoutAsLandlord.php" method="POST">
             <input type="submit" value="Logout">
         </form>
 

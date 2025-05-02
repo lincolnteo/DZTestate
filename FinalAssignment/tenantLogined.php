@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+// print the welcome message using session()
     session_start();
     if (isset($_SESSION['welcome_message'])) {
       echo "<script>alert('" . $_SESSION['welcome_message'] . "');</script>";
@@ -49,7 +50,7 @@
                   <tr><td>Enter current password:</td><td><input type="password" name="currentPassword" ></td></tr>
                   <tr><td>Enter new password:</td><td><input type="password" name="newPassword"></td></tr>
                   <tr><td>Confirm new password:</td><td><input type="password" name="confirmNewPassword"></td></tr>
-                  <tr><td><input type="submit" value="Reset"  id="Reset" onclick="f1.action='resetTenantPassword.php'"></td></tr>              
+                  <tr><td><input type="submit" value="Reset"  id="Reset" onclick="f1.action='ResetTenantPassword.php'"></td></tr>              
               </table>
             </form>
           </div>
@@ -77,13 +78,13 @@
                 </script>
                   <tr><td>Add comment: </td><td>
                   <textarea name="comment" rows="10" cols="20"></textarea>
-                  <tr><td><input type="submit" value="Submit Testimonial"  id="SubmitTestimonial" onclick="f2.action='testimonial.php'"></td></tr>              
+                  <tr><td><input type="submit" value="Submit Testimonial"  id="SubmitTestimonial" onclick="f2.action='Testimonial.php'"></td></tr>              
               </table>
             </form>
           </div>
 
         <!--Log out function-->
-        <form action="logoutTenant.php" method="POST">
+        <form action="LogoutAsTenant.php" method="POST">
         <input type="submit" value="Logout">
 </form>
     </body>

@@ -1,6 +1,5 @@
 <?php
 
-
 // database connection
 $con = mysqli_connect("localhost", "root", "", "dzt_db");
 
@@ -33,20 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // if username is found 
         if($result->num_rows>0)
         {
-<<<<<<< HEAD
            // print a message say: user already exists
          // then stay the same page let user re-input
          echo "<script>
          alert('Sorry, user already exists! Please choose another name');
-         window.location.href = 'SignUp.html';
+         window.location.href = 'Signup.html';
          </script>"; 
-=======
-            // print a message say: user already exists
-            echo "<script>alert('Sorry, user already exists in our database')</script>";
-            // then back to the sign up page
-            //header('Location:SignUp.html');
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
-        
         }
         // else insert this user to our database
         else{
@@ -57,58 +48,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             {   
                 // then start a session
                 session_start();
-<<<<<<< HEAD
                 $_SESSION['Tenantname']=$username;
 
-                // then using java script to print an alert welcome message and then jump back to home page
-                echo "<script>
+               // then using java script to print an alert welcome message and then jump back to home page
+               echo "<script>
                alert('Welcome " . $_SESSION['Tenantname'] . " You have signed up successfully, Now you can login to do more operations');
                window.location.href = 'Home.php';
                </script>";
-=======
-                $_SESSION['username']=$username;
-
-                // print a message say: user already exists
-                echo "<script>alert('Welcome $username, You have signed up successfully')</script>";
-                // then back to the home page
-                //header('Location:Home.html');
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
-
-                //then do something or go any pages after tenant signed up 
-
+               
             }
-<<<<<<< HEAD
             else {
                 echo "Error updating password: " . $stmt->error;
             }
             $stmt->close();
-=======
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
         }
-
+        $stmt1->close();
     }
     // else username and password are empty
-<<<<<<< HEAD
     else{      
         // print a message say: the name or password shouldn't be empty
          // then stay the same page let user re-input
          echo "<script>
          alert('Sorry, the name or password should not be empty');
-         window.location.href = 'SignUp.html';
-         </script>"; 
-=======
-    else{
-
-         
-         // print a message say: the name or password shouldn't be empty
-         echo "<script>alert('Sorry, the name or password should not be empty')</script>";
-         
-         // then back to the sign up page
-         //header('Location:SignUp.html');
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
-        
-    }
-    
+         window.location.href = 'Signup.html';
+         </script>";     
+    } 
 }
 
  //function pass_input() to sanitize and validate the XSS attacks
@@ -119,4 +83,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     return $data;// return validated data value
 }
 
+$con->close();
 ?>

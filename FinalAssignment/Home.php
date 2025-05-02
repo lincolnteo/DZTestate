@@ -1,5 +1,4 @@
 <?php
-
 $con = mysqli_connect("localhost", "root", "", "DZT_DB");
 if (!$con) {
     echo "Connection failed ", mysqli_connect_error();
@@ -30,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "<br>";
     }
 }
+$con->close();
 ?>
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,8 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="images/logo.png" alt="Logo" class="logo">
             <button class="burger-button" onclick="toggleDropdown()">☰</button>
             <div class="dropdown-menu" id="dropdownMenu">
-                <a href="login.html">Login</a>
-                <a href="SignUp.html">Sign Up</a>
+                <a href="Login.html">Login</a>
+                <a href="Signup.html">Sign Up</a>
             </div>
         </div>
         <form action="Home.php" method="POST">
@@ -92,5 +91,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 </body>
 </html>
-=======
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb

@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
 session_start(); 
-=======
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
 // database connection
 $con = mysqli_connect("localhost", "root", "", "dzt_db");
 
@@ -52,16 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
                     $stmt->bind_param("ss", $newPassword, $username);
                     if ($stmt->execute()) {
-<<<<<<< HEAD
                         session_start();          
                          // print a message say: password has been updated successfully    
                          echo "<script>
                          alert('Your password has been updated successfully!');
-                         window.location.href = 'landlordLogined.php';
+                         window.location.href = 'LandlordLogined.php';
                          </script>";
-=======
-                        echo "Password updated successfully.";
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
+                        
                     } else {
                         echo "Error updating password: " . $stmt->error;
                     }
@@ -73,36 +67,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // not match any information in two tables
             else{
             
-<<<<<<< HEAD
                  // print a message say: the name or current password you entered is invalid!      
                  echo "<script>
                  alert('Sorry, the name or current password you entered is invalid! ');
-                 window.location.href = 'landlordLogined.php';
+                 window.location.href = 'LandlordLogined.php';
                  </script>";
-=======
-                // print a message say: the name or password shouldn't be empty        
-                echo "<script>alert('Sorry, the name or current password you entered is invalid!')</script>";        
-                // then back to the sign up page        
-                //header('Location:SignUp.html');
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
-         
             }
         }
         else{
-<<<<<<< HEAD
-           // print a message say: the new password and confirmed password is difference
+        // print a message say: the new password and confirmed password is difference
          // then stay the same page let user re-input
          echo "<script>
          alert('Sorry, the new password and confirmed password is difference!');
-         window.location.href = 'landlordLogined.php';
+         window.location.href = 'LandlordLogined.php';
          </script>";
-=======
-            // print a message say: the name or password shouldn't be empty
-         echo "<script>alert('Sorry, the new password and confirmed password is difference!')</script>";
-         
-         // then back to the sign up page
-         //header('Location:SignUp.html');
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
         }
      
 
@@ -110,18 +88,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // if one of them is empty
     else{
          // print a message say: the name or password shouldn't be empty
-<<<<<<< HEAD
          // then stay the same page let user re-input
          echo "<script>
          alert('Sorry, the name or password should not be empty');
-         window.location.href = 'landlordLogined.php';
+         window.location.href = 'LandlordLogined.php';
          </script>";
-=======
-         echo "<script>alert('Sorry, the name or password should not be empty')</script>";
-         
-         // then back to the sign up page
-         //header('Location:SignUp.html');
->>>>>>> 5c1c4024f986f4e484d2afad73437f4534d91dfb
     }
 }
 
@@ -132,7 +103,5 @@ function pass_input($data){
     $data = strip_tags($data);// remove html elment
     return $data;// return validated data value
 }
-
-
 $con->close();
 ?>
