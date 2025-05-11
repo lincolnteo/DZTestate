@@ -1,0 +1,331 @@
+
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Times New Roman', Times, serif;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .signup-form1 {
+      background-color: #e7bff5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin: auto;
+      display: none;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .signup-form1 h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .signup-form1 label {
+      display: block;
+      margin-bottom: 5px;
+      color: #2f2e2e;
+    }
+    .signup-form1 input[type="text"],
+    .signup-form1 input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .signup-form1 input[type="submit"] {
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .signup-form1 input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    .signup-form1 #username{
+        border: solid 1px #ed8be0;
+    }
+    .signup-form1 #password{
+        border: solid 1px #ed8be0;
+    }
+    .signup-form2 {
+      background-color: #e7bff5;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      display: none;
+      margin: auto;
+      font-family: 'Times New Roman', Times, serif;
+
+    }
+
+    .signup-form2 h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .signup-form2 label {
+      display: block;
+      margin-bottom: 5px;
+      color: #2f2e2e;
+    }
+
+    .signup-form2 input[type="text"],
+    .signup-form2 input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .signup-form2 input[type="submit"] {
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .signup-form2 input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    .signup-form2 #username{
+        border: solid 1px #ed8be0;
+    }
+    .signup-form2 #password{
+        border: solid 1px #ed8be0;
+    }
+    body #header2{ /*change some style to the page*/
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        align-items: center;
+        
+
+    }
+    body .list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly; 
+    padding: 1%; 
+}
+body .list #signUp{
+    background-color: #5cf45c;
+    font-size: 120%;
+}
+body .list #signUp:hover{
+    background-color: #3bffe2;
+    font-size: 120%;
+}
+  
+body .header1{
+    display: flex;
+}
+.footer{ /*add effects in the footer using margin to control the position*/
+    background-color: #231f20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 69%;
+}
+.footer ul{ /*ul in footer should no bullets and display flex*/
+    display: flex;
+    list-style-type: none;
+    
+}
+.footer li{  
+   padding-right:3rem ;
+}
+.footer a{ /*change the font-family of links in footer and color size without underline*/
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+}
+.footer a:hover{/*when hover links add underline*/
+    text-decoration: underline;
+}
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+table th, table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+table tr:hover {
+  background: #f1f1f1;
+  transition: background 0.3s ease;
+}
+
+table td {
+  color: #333;
+}
+
+table td button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+table td button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Reset Password Button */
+#resetTenant {
+  background: linear-gradient(135deg, #FF416C, #FF4B2B);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+#resetTenant:hover {
+  background: linear-gradient(135deg, #FF4B2B, #FF416C);
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(255, 75, 43, 0.3);
+}
+
+/* Add Your Property Button */
+#PropertyList {
+  background: linear-gradient(135deg, #00C9FF, #92FE9D);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+#PropertyList:hover {
+  background: linear-gradient(135deg, #92FE9D, #00C9FF);
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 201, 255, 0.3);
+}
+
+/* Form Styling */
+form {
+  margin: 20px 0;
+}
+
+form label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+form input, form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+/* Logout Button */
+#logoutButton {
+  background: linear-gradient(135deg, #FF7E5F, #FEB47B); /* Gradient styling */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+#logoutButton:hover {
+  background: linear-gradient(135deg, #FEB47B, #FF7E5F); /* Reverse gradient on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(255, 126, 95, 0.3); /* Add shadow on hover */
+}
+/* Write Testimonial Button */
+#testimonial {
+  background: linear-gradient(135deg, #56ab2f, #a8e063); /* Green gradient */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+#testimonial:hover {
+  background: linear-gradient(135deg, #a8e063, #56ab2f); /* Reverse gradient on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(86, 171, 47, 0.3); /* Add shadow on hover */
+}
